@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -30,6 +31,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	fmt.Println(config.ProfCfg.StorageConfig.ElasticConfig.ElasticAddr)
 
 	//Generating api object
 	restAPI, err := customer.New(&config)

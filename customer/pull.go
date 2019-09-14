@@ -14,6 +14,6 @@ func (customer *Customer) Pull(ctx context.Context, req *customerpb.PullRequest)
 		return nil, err
 	}
 
-	return &customerpb.PullResponse{CustomerProfile: &cust}, nil
+	return &customerpb.PullResponse{CustomerCustomer: &cust}, nil
 
 }
