@@ -27,7 +27,7 @@ message PullRequest{
 }
 
 message PullResponse{
-  customer.models.Customer CustomerCustomer = 1;
+  customer.models.Customer CustomerProfile = 1;
 }
 
 message SearchRequest{

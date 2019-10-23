@@ -8,7 +8,6 @@ import (
 type Customer struct {
 	strg          storage.Storage
 	defaultAvatar string
-	defaultBanner string
 }
 
 // New returns a new Eclient customer service
@@ -18,7 +17,8 @@ func New(cfg *Config) (*Customer, error) {
 	storg, err := storage.NewES(cfg.StorageConfig)
 
 	cust := &Customer{
-		strg: storg,
+		strg:          storg,
+		defaultAvatar: "https://imgur.com/exampleImage.png",
 	}
 
 	return cust, err
